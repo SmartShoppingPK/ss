@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Outfit:wght@500;700;800&family=Syne:wght@800&display=swap');
+:root{--mint:#d6f7c6;--ink:#22093f;--orange:#ff5a0a;--lilac:#c9aaf7;--cream:#f6f4ec;--r:16px}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--cream);color:var(--ink);font:500 17px/1.5 Outfit,system-ui,sans-serif}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.page{background:var(--mint);margin:8px;border-radius:var(--r);overflow:hidden;flex:1;display:flex;flex-direction:column}
+main.wrap{flex:1}
+h2{font:800 clamp(26px,4vw,40px)/1.1 Syne,sans-serif;margin:0 0 12px}
+h3{font:700 18px/1.25 Outfit,sans-serif;margin:0}
+a{color:inherit}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:flex-start}
+.logo{background:var(--cream);padding:14px;border-radius:0 0 var(--r) 0}
+.logo i{display:block;width:42px;height:42px;border-radius:50%;background:var(--orange);box-shadow:inset 0 0 0 7px var(--orange),inset 0 0 0 11px var(--cream)}
+nav{display:flex;gap:clamp(18px,6vw,80px);padding:28px clamp(16px,4vw,40px) 0}
+nav a{font-weight:800;text-transform:uppercase;text-decoration:none}
+nav a[aria-current=page]{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;text-decoration-color:var(--orange)}
+
+/* ticker */
+.ticker{background:var(--lilac);overflow:hidden;white-space:nowrap;font:800 22px/1 Syne,sans-serif;text-transform:uppercase;padding:14px 0}
+.ticker div{display:inline-block;animation:slide 28s linear infinite}
+.ticker span{margin:0 30px}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker div{animation:none}}
+
+/* buttons */
+.btn{font:800 14px Outfit,sans-serif;text-transform:uppercase;background:var(--ink);color:var(--cream);border:2px solid var(--ink);border-radius:99px;padding:11px 22px;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.btn.orange{background:var(--orange);border-color:var(--orange);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:disabled{opacity:.5;cursor:wait}
+
+/* footer */
+.foot{background:var(--ink);color:var(--cream);padding:28px clamp(16px,3vw,32px);font-size:14px;display:flex;gap:16px 40px;flex-wrap:wrap;justify-content:space-between}
+.foot p{margin:0;max-width:60ch}
+.foot nav{padding:0;gap:20px}
+
+.logo img{display:block;width:46px;height:46px}

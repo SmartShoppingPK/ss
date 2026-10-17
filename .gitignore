@@ -1,0 +1,6 @@
+.env
+node_modules/
+data/products.json
+data/last-import.txt
+public/uploads/*
+!public/uploads/.gitkeep
